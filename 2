@@ -1,0 +1,55 @@
+def func(num):
+#    if num % 10 == 1 and num % 100 != 11:
+#        return f'{num} копейка'
+#    elif num % 10 in [2, 3, 4] and num % 100 not in [12, 13, 14]:
+#        return f'{num} копейки'
+#    else:
+#        return f'{num} копеек'
+#
+#
+# print(func(int(input())))
+# god = int(input())
+# if ((god % 4 == 0) and (god % 100 != 0)) or ((god % 4 == 0) and (god % 400 == 0)):
+# print(string(god) "весокосный год")
+
+d = int(input())
+n = int(input())
+# d - день n - месяц
+#if d > 0 and d < 32 and n < 13 and n > 0:
+#      if d > 21 and n == 3 or n == 4 and d < 20:
+#          print("Овен")
+#      if d > 21 and n == 4 or n == 5 and d < 20:
+#          print("Телец")
+#      if d > 21 and n == 5 or n == 6 and d < 21:
+#          print("Близнецы")
+#      if d > 22 and n == 6 or n == 7 and d < 22:
+#          print("Рак")
+#      if d > 23 and n == 7 or n == 8 and d < 23:
+#          print("Лев")
+#      if d > 24 and n == 8 or n == 9 and d < 23:
+#          print("Дева")
+#      if d > 24 and n == 9 or n == 10 and d < 23:
+#          print("Весы")
+#      if d > 24 and n == 10 or n == 11 and d < 22:
+#          print("Скорпион")
+#      if d > 23 and n == 11 or n == 12 and d < 21:
+#          print("Стрелец")
+#      if d > 22 and n == 12 or n == 1 and d < 20:
+#          print("Козерок")
+#      if d > 21 and n == 1 or n == 2 and d < 18:
+#          print("Водолей")
+#      if d > 19 and n == 2 or n == 3 and d < 20:
+#          print("Рыбы")
+#else:
+#    print("Несуществующая дата")
+
+d = int(input())
+m = int(input()) - 2
+y = int(input())
+if m <= 0:
+    m += 12
+    y -= 1
+c = y // 100
+y -= c * 100
+d = (d + (13 * m - 1) // 5 + y + y // 4 + c // 4 - 2 * c) % 7
+print(d)
