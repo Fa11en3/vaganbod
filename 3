@@ -1,0 +1,17 @@
+from random import randint
+array = []
+for i in range (0, 100):
+    randomnik = randint (-1000, 1000)
+    array.append(randomnik)
+print(array)
+kolvo = len(array)
+kolvoChanging = kolvo
+cell = 0
+for i in range (0, kolvo):
+    for i in range (0, kolvoChanging-1):
+        if array[i] > array[i+1]:
+            cell = array[i]
+            array[i] = array[i+1]
+            array[i+1] = cell
+    kolvoChanging = kolvoChanging - 1
+print(array)
