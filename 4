@@ -1,0 +1,33 @@
+from random import randint
+array = []
+for i in range (0, 100):
+    randomnik = randint (-1000, 1000)
+    array.append(randomnik)
+print(array)
+kolvo = len(array)
+kolvoChanging = kolvo - 1
+kolvoChanging2 = kolvo - 1
+globalKolvoChanging2 = - 1
+#Связывает оба цикла:x
+changing = kolvoChanging
+cell = 0
+kolvo = int(kolvo / 2)
+print(kolvo)
+for i in range (0, kolvo + 2):
+    for i in range (0, kolvoChanging):
+        if array[i] > array[i+1]:
+            cell = array[i]
+            array[i] = array[i+1]
+            array[i+1] = cell
+        print(array)
+    changing = changing - 1
+    while (changing != globalKolvoChanging2):
+        if array[kolvoChanging2] < array[kolvoChanging2 - 1]:
+            cell = array[kolvoChanging2 - 1]
+            array[kolvoChanging2 - 1] = array[kolvoChanging2]
+            array[kolvoChanging2] = cell
+        print(array)
+        kolvoChanging2 = kolvoChanging2 - 1
+    kolvoChanging = kolvoChanging - 1
+    kolvoChanging2 = kolvo - 1
+    globalKolvoChanging2 = globalKolvoChanging2 + 1
